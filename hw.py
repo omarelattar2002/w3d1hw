@@ -8,11 +8,19 @@ class Animal:
         self.name = name
         self.energy = energy
     
-    def play(self, time_played, energy_decrease):
-        self.energy_decrease = self.energy -= energy
+    def play(self, time_played, energy_decrease):      # I am so lost over here what other argument do I need for it to function
+        self.energy -= energy_decrease
 
+
+    def sleep():
+        pass
 
 
 zack = Animal('zack', 50)
+
+
+zack.play(5)
+
+
 
 print(zack.energy)
