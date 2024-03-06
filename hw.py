@@ -8,8 +8,9 @@ class Animal:
         self.name = name
         self.energy = energy
     
-    def play(self, time_played, energy_decrease):      # I am so lost over here what other argument do I need for it to function
+    def play(self, energy_decrease):      # Nvm
         self.energy -= energy_decrease
+        print(f"{self.name} has played for {self.time_played} and his energy now is {self.energy}")
 
 
     def sleep():
