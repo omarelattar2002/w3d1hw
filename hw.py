@@ -41,3 +41,45 @@ print(d2.energy)
 
 
 #excercise 2
+
+class Cart:
+    def __init__(self):
+        self.cart_arr = []  
+    
+    def add(self):
+        item = input("What would you like to add? ").title()
+        self.cart_arr.append(item)
+        print(f"\n{item} has been added to your cart.")
+    
+    def remove(self,):
+        item = input("What would you like to remove? ").title()
+        if item in self.cart_arr:
+            self.cart_arr.remove(item)
+            print(f"\n{item} has been removed from your cart.")
+        else:
+            print(f"\n{item} is not in your cart.")
+    
+    def show(self):
+        print("Here is your cart.\n")
+        for thing in self.cart_arr:
+            print(thing)
+    
+def shop():
+    cart = Cart()
+    print("Welcome to the new, improved (despite the fewer features) shopping cart!\n")
+    while True:
+        response = input("What would you like to do? add/remove/show/quit ").lower()
+        if response == 'add':
+            cart.add()
+        elif response == 'remove':
+            cart.remove()
+        elif response == 'show':
+            cart.show()
+        elif response == 'quit':
+            cart.show()
+            print("\nThank you for using the shopping cart.\nHave a nice day!")
+            break  
+        else:
+            print("Invalid response. Please try again")
+
+shop()
